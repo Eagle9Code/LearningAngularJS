@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8" />
+    <title>Chapter 1 Example</title>
+    <script src="http://code.angularjs.org/1.2.14/angular.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Introduction</h1>
+    <label>My name:</label>
+    <input type="text" placeholder="Please enter name:" ng-model="name" />
+    <br />
+    <label>My favorite color:</label>
+    <select ng-model="colour">
+        <option value="">Please select</option>
+        <option>red</option>
+        <option>yellow</option>
+        <option>magenta</option>
+    </select>
+    <h3 ng-show="name">Hello! My name is {{name}}</h3>
+    <h3 ng-show="colour">My favourite colour is <span title="{{colour}}" style="background-color:{{colour}};">&nbsp;&nbsp;</span>.</h3>
+</body>
+</html>
