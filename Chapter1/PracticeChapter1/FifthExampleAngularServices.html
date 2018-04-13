@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Fifth Example - Angular Services</title>
+    <script src="http://code.angularjs.org/1.2.14/angular.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Introduction - Angular Services</h1>
+    <br />
+    <h1>Game Setup!</h1>
+    <div ng-controller="ExampleController1">
+        <label>Player 1</label>
+        <input type="text" placeholder="Please enter Player 1 name" ng-model="name" ng-focus="onFocusChanged()" />
+        <h1 ng-show="name">Player 1 name is {{name}}</h1>
+        <div ng-show="previousName"><h1>Player 1 previous name is {{previousName}}</h1></div>
+    </div>
+    <div ng-controller="ExampleController2">
+        <label>Player 2</label>
+        <input type="text" placeholder="Please enter Player 2 name" ng-model="name" ng-focus="onFocusChanged()" />
+        <h1 ng-show="name">Player 2 name is {{name}}</h1>
+        <div ng-show="previousName"><h1>Player 2 previous name is {{previousName}}</h1></div>
+    </div>
+    <script type="text/javascript">
+        "use strict";
+        ; (function () {
+            var myAppModule = angular.module('myApp', []);
+            myAppModule.controller('ExampleController1', ['$scope', function ($scope) {
+                $scope.name = "Kishore";
+                $scope.previousName = "";
+                $scope.onFocusChanged = function () {
+                    $scope.previousName = $scope.name;
+                };
+            }]);
+            myAppModule.controller('ExampleController2', ['$scope', function ($scope) {
+                $scope.name = "Sangeetha";
+                $scope.previousName = "";
+                $scope.onFocusChanged = function () {
+                    $scope.previousName = $scope.name;
+                };
+            }]);
+        }());
+    </script>
+</body>
+</html>
