@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Revealing Module Pattern</title>
+</head>
+<body>
+    <h1>Revealing Module Pattern!</h1>
+    <script type="text/javascript">
+        var revealingModule = (function () {
+            var innerObject = 5;
+            var innerFunction = function (value) {
+                return innerObject + value;
+            };
+
+            return {
+                outterObject1: innerFunction(1),
+                outterObject2: innerFunction(2),
+                outterFunction: innerFunction
+
+            };
+        }());
+        console.log("outterObject1:" + revealingModule.outterObject1);
+        console.log("outterObject2:" + revealingModule.outterObject2);
+        console.log("innerObject:" + revealingModule.innerObject);
+        console.log("outterFunction(3): " + revealingModule.outterFunction(3));
+        console.log("innerFunction(3): " + revealingModule.innerFunction(3));
+    </script>
+</body>
+</html>
