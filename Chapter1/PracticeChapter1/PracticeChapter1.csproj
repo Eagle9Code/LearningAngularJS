@@ -77,6 +77,7 @@
   <ItemGroup>
     <Content Include="FirstExample.html" />
     <Content Include="SecondExample.html" />
+    <Content Include="ThirdExample.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
