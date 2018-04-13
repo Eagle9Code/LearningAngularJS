@@ -78,6 +78,7 @@
     <Content Include="FirstExample.html" />
     <Content Include="SecondExample.html" />
     <Content Include="ThirdExample.html" />
+    <Content Include="ThirdExampleIIFE.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
